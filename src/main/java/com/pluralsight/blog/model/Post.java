@@ -25,13 +25,10 @@ public class Post {
     @CreationTimestamp
     private Date date;
 
-    @ManyToOne
-    @JoinColumn(name = "author_id")
+    @ManyToOne(fetch = FetchType.EAGER)
     private Author author;
 
-    public Author getAuthor() {
-        return author;
-    }
+
 
     public Post() {
         super();
@@ -87,5 +84,12 @@ public class Post {
         Post otherPost = (Post)obj;
         return this.title.equals(otherPost.getTitle()) &&
                this.body.equals(otherPost.getBody());
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 }
