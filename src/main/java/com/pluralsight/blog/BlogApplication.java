@@ -1,6 +1,5 @@
 package com.pluralsight.blog;
 
-import org.apache.xpath.operations.String;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
